@@ -1,0 +1,63 @@
+# 依赖目录
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 覆盖率目录
+coverage/
+.nyc_output
+
+# 依赖锁定文件（可选，根据团队偏好）
+# package-lock.json
+# yarn.lock
+
+# 日志文件
+logs
+*.log
+
+# 临时文件
+.tmp/
+.temp/
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 构建输出目录
+dist/
+build/
+out/
+
+# 测试覆盖率报告
+coverage/
+.nyc_output/
+
+# 缓存目录
+.cache/
+.parcel-cache/
