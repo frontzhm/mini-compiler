@@ -1,33 +1,107 @@
-# 编译器
+# Mini Compiler 🚀
 
-## 安装
+> 📚 **详细技术文章**: [编译器深度解析：从理论到实践](./编译器深度解析：从理论到实践.md)  
+> 🌟 **项目地址**: [https://github.com/frontzhm/mini-compiler](https://github.com/frontzhm/mini-compiler)
 
+一个简单而完整的编译器实现，将LISP风格的代码转换为JavaScript代码。通过这个项目，您可以深入理解编译器的四个核心阶段：词法分析、语法分析、代码转换和代码生成。
+
+## ✨ 项目特色
+
+- 🎯 **完整的编译器实现**：包含词法分析、语法分析、代码转换、代码生成四个阶段
+- 📖 **详细的技术文档**：每个阶段都有详细的实现逻辑和流程图
+- 🧪 **测试驱动开发**：使用Vitest进行单元测试，确保代码质量
+- 🏗️ **模块化设计**：每个阶段独立模块，易于理解和扩展
+- 💬 **中文注释**：所有代码都有详细的中文注释
+
+## 🚀 快速开始
+
+### 克隆项目
+```bash
+git clone https://github.com/frontzhm/mini-compiler.git
+cd mini-compiler
+```
+
+### 安装依赖
 ```bash
 npm install
 ```
 
-## 运行
-
+### 运行测试
 ```bash
-npm run test
+npm test
 ```
 
-## 简介
+### 体验完整编译流程
+```bash
+# 运行单个测试文件
+npm test -- src/compiler/index.spec.js
+
+# 运行所有测试
+npm test
+```
+
+## 📋 编译过程
 
 主要是将`'(add 2 (subtract 4 2))'`通过编译器转换为`'add(2, subtract(4, 2))'`。
 在这过程中经历普通编译器的过程：词法分析、语法分析、代码转换、代码生成。
 
-- 词法分析`tokenizer`是将输入的字符串转换为一个个的 token。
+- **词法分析**`tokenizer`：将输入的字符串转换为一个个的 token
+- **语法分析**`parser`：将 token 转换为抽象语法树(AST)
+- **代码转换**`transformer`：将 AST 转换为另一种形式的 AST
+- **代码生成**`codeGenerator`：将 AST 转换为代码
 
-- 语法分析`parser`是将 token 转换为抽象语法树(AST)。
-
-- 代码转换`transformer`是将 AST 转换为另一种形式的 AST。
-
-- 代码生成`codeGenerator`是将 AST 转换为代码。
-
-## 测试
+## 🧪 测试
 
 项目是测试驱动开发的，每个功能都先写测试，再写实现，也可以动态`npm test -- src/compiler/index.spec.js `执行单个测试文件。
+
+## 📁 项目结构
+
+```
+src/
+├── tokenizer/     # 词法分析器
+├── parser/        # 语法分析器  
+├── transformer/   # 代码转换器
+├── codeGenerator/ # 代码生成器
+└── compiler/      # 编译器主入口
+```
+
+## 🎓 学习价值
+
+通过这个项目，您将学会：
+
+- **编译器原理**：深入理解编译器的四个核心阶段
+- **递归下降解析**：掌握语法分析的核心算法
+- **访问者模式**：理解代码转换的设计模式
+- **状态机设计**：学习词法分析器的实现原理
+- **递归代码生成**：掌握代码生成器的实现策略
+
+## 📚 详细文档
+
+查看 [编译器深度解析：从理论到实践](./编译器深度解析：从理论到实践.md) 获取详细的技术文档，包括：
+
+- 每个阶段的详细实现逻辑
+- 完整的流程图和示意图
+- 代码注释和实现技巧
+- 扩展思考和深入学习建议
+
+## 🤝 贡献
+
+欢迎提交Issue和Pull Request来改进这个项目！
+
+## 📄 许可证
+
+MIT License
+
+---
+
+<div align="center">
+
+**⭐ 如果这个项目对您有帮助，请给个Star支持一下！**
+
+[![GitHub stars](https://img.shields.io/github/stars/frontzhm/mini-compiler?style=social)](https://github.com/frontzhm/mini-compiler)
+[![GitHub forks](https://img.shields.io/github/forks/frontzhm/mini-compiler?style=social)](https://github.com/frontzhm/mini-compiler)
+
+</div>
 
 ## 实现思路
 
