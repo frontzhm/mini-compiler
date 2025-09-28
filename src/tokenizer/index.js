@@ -1,4 +1,4 @@
-const tokenizer = (code) => {
+export function tokenizer(code) {
   const tokens = []
   let current = 0
   const length = code.length
@@ -54,9 +54,7 @@ const tokenizer = (code) => {
   return tokens
 }
 
-module.exports = { tokenizer }
 
-// add(1, 2)
 
 
 
